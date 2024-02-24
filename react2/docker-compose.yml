@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+
+  react:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    ports:
+      - "3003:3000"
+    environment:
+      - BACKENDD=172.30.0.2
+      - BACKENDP=
+    networks:
+      - mynetwork
+
+
